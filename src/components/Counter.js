@@ -19,7 +19,7 @@ class Counter extends Component{
         this.props.onIncreaseClick()
     }
     shouldComponentUpdate(nextProps, nextState) {
-       if(this.props.value.length == nextProps.value.length && JSON.stringify(this.props.value) == JSON.stringify(nextProps.value)){
+       if(this.props.value.length === nextProps.value.length && JSON.stringify(this.props.value) === JSON.stringify(nextProps.value)){
             return false
        }
        return true
