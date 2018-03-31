@@ -8,7 +8,7 @@ import Slider from '../components/Slider'
 
 function mapStateToProps(state) {
     return {
-        msg: state.payload
+        value: state.payload
     }
 }
 

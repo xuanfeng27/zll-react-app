@@ -6,8 +6,13 @@ class Slider extends Component {
     constructor(props){
         super(props)
     }
+    shouldComponentUpdate(nextProps, nextState) {
+        if(this.props.value.length === nextProps.value.length && JSON.stringify(this.props.value) === JSON.stringify(nextProps.value)){
+            return false
+        }
+        return true
+    }
     render(){
-        console.log('this.props2222',this.props)
         return(<h1>Slider</h1>)
     }
 }
