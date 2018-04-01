@@ -5,6 +5,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import App from './container/App'
 import SliderCon from './container/SliderCon'
+import Draggable from './components/Draggable'
 
 const AllApp = () => (
     <Router>
@@ -17,7 +18,7 @@ const AllApp = () => (
                     <Link to="/about">About</Link>
                 </li>
                 <li>
-                    <Link to="/about">Drage</Link>
+                    <Link to="/draggable">Draggable</Link>
                 </li>
             </ul>
 
@@ -25,6 +26,7 @@ const AllApp = () => (
 
             <Route exact path="/" component={App} />
             <Route path="/about" component={SliderCon} />
+            <Route path="/draggable" component={Draggable}/>
         </div>
     </Router>
 );
